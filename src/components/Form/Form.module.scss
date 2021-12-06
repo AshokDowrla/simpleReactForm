@@ -1,0 +1,32 @@
+.form {
+  &--container {
+    max-width: 480px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &--title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    letter-spacing: 0.26px;
+    line-height: 3.8rem;
+    margin-bottom: 4rem;
+    color: #333333;
+  }
+
+  &--signIn__text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.26px;
+    line-height: 3rem;
+    color: #333333;
+    margin-bottom: 4rem;
+    span {
+      color: #286efa;
+    }
+  }
+}

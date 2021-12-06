@@ -1,0 +1,80 @@
+.formInput,
+.formSelect {
+  &--container {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  &--container.invalid {
+    input {
+      border-color: #f53c3c;
+    }
+
+    label,
+    .err-msg {
+      color: #f53c3c;
+    }
+  }
+
+  &--field, &--input {
+    border-radius: 4px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.26px;
+    line-height: 30px;
+    width: 100%;
+    color: #777777;
+    border: 0.2rem solid rgba(119, 119, 119, 0.3);
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+
+    &:focus {
+      outline: none;
+      color: #333333;
+    }
+
+    &:not(:placeholder-shown) {
+      color: #333333;
+    }
+
+    &:focus ~ .formInput--label,
+    &:not(:placeholder-shown):not(:focus) ~ .formInput--label {
+      font-size: 1.2rem;
+      letter-spacing: 0.26px;
+      line-height: 2rem;
+      top: -10px;
+      background-color: #f9f9f9;
+    }
+  }
+
+  &--label {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #777777;
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    cursor: text;
+    background-color: inherit;
+    padding: 0px 0.2rem;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  }
+
+  &--img {
+    position: absolute;
+    right: 17px;
+    top: 19px;
+    width: 15px;
+    height: auto;
+  }
+
+}
+
+.err-msg {
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.26px;
+  margin-top: 10px;
+  margin-left: 2px;
+}

@@ -1,0 +1,22 @@
+.form {
+    &-btn {
+      width: 100%;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 0.26px;
+      line-height: 2.5rem;
+      padding: 12px;
+      border-radius: 4px;
+      color: #ffffff;
+      background-color: #286efa;
+      border: none;
+      outline: none;
+    }
+  
+    &-btn.disabled {
+      color: #aaaaaa;
+      background-color: #ededed;
+      cursor: not-allowed;
+    }
+  }
+  
