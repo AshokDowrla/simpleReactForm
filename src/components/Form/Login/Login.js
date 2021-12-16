@@ -31,6 +31,8 @@ const Login = () => {
     formIsValid = true;
   }
 
+  console.log('Login')
+
   const submitHandler = (event) => {
     event.preventDefault();
 

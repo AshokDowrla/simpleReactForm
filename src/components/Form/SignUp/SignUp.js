@@ -12,7 +12,7 @@ const selectDefaultPlaceholder = "I would describe my user type as";
 const SignUp = (props) => {
   const [dropdownValue, setDropdownValue] = useState(selectDefaultPlaceholder);
   const [dropdownValid, setDropdownValid] = useState(false);
-
+console.log('SignUp')
   const {
     value: userNameValue,
     isValid: userNameIsValid,

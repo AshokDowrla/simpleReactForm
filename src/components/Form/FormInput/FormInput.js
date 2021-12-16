@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import styles from "./FormInput.module.scss";
 
@@ -6,7 +6,7 @@ const FormInput = (props) => {
   const [showSecret, setshowSecret] = useState(false);
   let isError = props.inputError.length > 0 ? true : false;
   const showInputType = showSecret ? "text" : props.inputType;
-
+  console.log("InputForm");
   return (
     <div
       className={`${styles["formInput--container"]} ${
@@ -44,4 +44,4 @@ const FormInput = (props) => {
   );
 };
 
-export default FormInput;
+export default React.memo(FormInput);

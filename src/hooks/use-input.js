@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 const useInput = (validateValue, inputField) => {
   const [enteredValue, setEnteredValue] = useState("");
@@ -8,19 +8,19 @@ const useInput = (validateValue, inputField) => {
   const valueIsValid = !valueErrorMsg.length;
   const hasErrorMsg = !valueIsValid && isTouched ? valueErrorMsg : "";
 
-  const valueChangeHandler = (event) => {
+  const valueChangeHandler = useCallback((event) => {
     setEnteredValue(event.target.value);
     setIsTouched(true);
-  };
+  }, []);
 
-  const inputBlurHandler = (event) => {
+  const inputBlurHandler = useCallback((event) => {
     setIsTouched(true);
-  };
+  }, []);
 
-  const reset = () => {
+  const reset = useCallback(() => {
     setEnteredValue("");
     setIsTouched(false);
-  };
+  }, []);
 
   return {
     value: enteredValue,
@@ -28,7 +28,7 @@ const useInput = (validateValue, inputField) => {
     hasErrorMsg,
     valueChangeHandler,
     inputBlurHandler,
-    reset,
+    reset
   };
 };
 
